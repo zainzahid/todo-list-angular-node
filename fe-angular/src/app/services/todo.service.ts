@@ -10,7 +10,7 @@ import { TodosResponse, TodoResponse } from '../models/Response';
   providedIn: 'root'
 })
 export class TodoService {
-  private baseUrl = 'http://localhost:3000/todo';
+  private baseUrl = '/todo';
 
   constructor(private http: HttpClient) { }
 

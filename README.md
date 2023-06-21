@@ -47,7 +47,7 @@ The application uses MongoDB Atlas as the database. Put your database connection
 
 ## Usage
 
-1. Application is deployed on Heroku at 
+1. Application is deployed on Railway platform free tier https://todo-list-angular-node-production.up.railway.app
 
 2. Sign up for a new account or log in with your existing credentials.
 
