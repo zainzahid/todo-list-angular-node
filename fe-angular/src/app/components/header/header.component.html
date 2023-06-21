@@ -1,0 +1,19 @@
+<header class="header">
+    <div class="container">
+      <div class="header-content">
+        <h1 class="title" routerLink="/">Todos!</h1>
+        <ul class="navbar-nav ml-auto">
+            <li *ngIf="authService.isLoggedIn() && !isLoginPage()" class="nav-item">
+              <a class="nav-link" href="#" (click)="logout()">Logout</a>
+            </li>
+            <li *ngIf="!authService.isLoggedIn() && isLoginPage()" class="nav-item">
+              <a class="nav-link" [routerLink]="['/signup']">Signup</a>
+            </li>
+            <li *ngIf="!authService.isLoggedIn() && isSignupPage()" class="nav-item">
+              <a class="nav-link" [routerLink]="['/login']">Login</a>
+            </li>
+          </ul>
+      </div>
+    </div>
+</header>
+  

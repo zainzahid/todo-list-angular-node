@@ -1,0 +1,12 @@
+<!-- todo.component.html -->
+<div class="card todo-card">
+  <div class="card-body">
+    <h2 class="card-title">{{ todoItem.title }}</h2>
+    <p class="card-text">{{ todoItem.description }}</p>
+    <p class="card-text">Priority: {{ todoItem.priority }}</p>
+    <p class="card-text">Due Date: {{ todoItem.dueDate | date: 'mediumDate'}}</p>
+    <p class="card-text">Status: {{ todoItem.status }}</p>
+    <button class="btn btn-danger" (click)="deleteTodo()">Delete</button>
+    <button class="btn btn-primary" [routerLink]="['/update/' + todoItem._id]">Edit</button>
+  </div>
+</div>

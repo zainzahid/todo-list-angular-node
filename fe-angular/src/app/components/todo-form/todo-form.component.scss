@@ -1,0 +1,23 @@
+.container {
+    padding: 3rem 1.5rem;
+    min-height: calc(100% - (122px));
+}
+
+.btn-container {
+    margin-top: 0.8rem;
+}
+
+.btn-primary {
+    background-color: #0984e3;
+    border: #0984e3;
+}
+
+.btn-secondary {
+    margin-left: 0.5rem;
+    background-color: #222f3e;
+    border: #222f3e;
+}
+
+.text-danger {
+    margin-top: 0.5rem;
+}

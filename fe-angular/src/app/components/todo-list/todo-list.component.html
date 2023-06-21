@@ -1,0 +1,25 @@
+<!-- todo-list.component.html -->
+<div class="container">
+  <h1 class="mb-4">Todo List for {{ this.authService.getUser()?.email }}</h1>
+
+<button class="add-button btn btn-primary mb-3" routerLink="/add">Add Item</button>
+
+<div class="filters row">
+  <div class="col-md-6">
+    <input type="text" [(ngModel)]="searchKeyword" (input)="searchTasks()" placeholder="Search by Title or Description..."
+      class="form-control mb-2">
+  </div>
+  <div class="col-md-6">
+    <select [(ngModel)]="sortBy" (change)="sortTasks()" class="form-control">
+      <option value="" disabled>Sort By</option>
+      <option value="priority">Priority</option>
+      <option value="dueDate">Due Date</option>
+      <option value="status">Status</option>
+    </select>
+  </div>
+</div>
+
+<div class="todo-list">
+  <app-todo *ngFor="let todoItem of filteredItems" [todoItem]="todoItem" (itemRemoved)="removeItem($event)"></app-todo>
+</div>
+

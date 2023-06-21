@@ -1,0 +1,13 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url(assets/font/spacegrotesk.ttf) format("truetype");
+}
+
+html,
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    height: 100%;
+    margin: 0;
+}

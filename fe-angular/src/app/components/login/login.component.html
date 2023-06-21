@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="login-card">
+    <h2>Login</h2>
+
+    <form (submit)="login(loginForm)" #loginForm="ngForm">
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="email" [(ngModel)]="email" name="email" class="form-control" required email>
+        <div *ngIf="loginForm.controls['email']?.invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched || loginForm.submitted)" class="text-danger">
+          <span *ngIf="loginForm.controls['email'].errors">Valid Email is required</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Password:</label>
+        <input type="password" [(ngModel)]="password" name="password" class="form-control" required minlength="8">
+        <div *ngIf="loginForm.controls['password']?.invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched || loginForm.submitted)" class="text-danger">
+          <span *ngIf="loginForm.controls['password'].errors">Password is required and must be at least 8 characters long</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Login</button>
+        <a class="btn btn-link" routerLink="/signup">Signup</a>
+      </div>
+      <div *ngIf="loginError" class="text-danger">
+        Login failed. Please check your credentials.
+      </div>
+    </form>
+  </div>
+</div>
